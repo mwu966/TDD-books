@@ -9,6 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Button x:Name="MyButton" Background="Gold" Foreground="White">
+            <TextBlock x:Name="MybuttonText" FontSize="50">Click me</TextBlock>
+        </Button>
     </Grid>
 </Page>
