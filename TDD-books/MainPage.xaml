@@ -7,10 +7,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="Large">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="50"/>
+        </Style>
+        <Style x:Key="Small" TargetType="Button">
+            <Setter Value="100" Property="Width"/>
+        </Style>
+    </Page.Resources>
 
-    <Grid>
-        <Button x:Name="MyButton" Background="Gold" Foreground="White">
-            <TextBlock x:Name="MybuttonText" FontSize="50">Click me</TextBlock>
-        </Button>
-    </Grid>
+    <StackPanel>
+        <Button Style="{StaticResource Large}" Background="Blue">Hello</Button>
+        <Button Style="{StaticResource Large}" Background="Red">World</Button>
+        <Button Style="{StaticResource Small}" Background="Gray">XAML</Button>
+    </StackPanel>
 </Page>
